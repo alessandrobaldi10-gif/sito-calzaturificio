@@ -45,14 +45,21 @@
       <p data-i18n="storia_p2">È un'impresa che tramanda di generazione in generazione i trucchi e i segreti del mestiere, ed è in grado di offrire prodotti unici nel loro genere.</p>
     </div>
     <div class="leather-swatch">
-      <svg viewBox="0 0 300 375" preserveAspectRatio="none">
-        <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.35 0"/></filter>
-        <rect width="300" height="375" filter="url(#grain)"/>
-      </svg>
+      <img id="storiaImg" src="images/uploads/mocassino-3482-1.jpg" alt="Cuoio vegetale · Toscana">
       <span class="tag" data-i18n="storia_tag">Cuoio vegetale · Toscana</span>
     </div>
   </div>
 </section>
+
+<script>
+  fetch('data/storia.json')
+    .then(r => r.json())
+    .then(data => {
+      const img = document.getElementById('storiaImg');
+      if (img && data.swatchImage) { img.src = data.swatchImage; }
+    })
+    .catch(() => {});
+</script>
 
 <footer id="contatti">
   <div class="container">
