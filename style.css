@@ -119,8 +119,8 @@ section{padding:96px 0;}
 .contact-grid h3{font-size:20px; margin-bottom:14px;}
 .contact-grid .addr{font-family:'JetBrains Mono', monospace; font-size:14px; line-height:2; color:#3a3a3a;}
 .contact-grid a.big-link{display:block; font-size:16px; margin-bottom:10px; text-decoration:underline; text-decoration-color:var(--ottone); text-underline-offset:4px;}
-.map-swatch{aspect-ratio:4/3; border-radius:3px; position:relative; overflow:hidden; background: repeating-linear-gradient(0deg, rgba(36,26,20,0.06) 0 1px, transparent 1px 34px), repeating-linear-gradient(90deg, rgba(36,26,20,0.06) 0 1px, transparent 1px 34px), var(--pergamena-2);}
-.map-swatch .pin{position:absolute; top:50%; left:52%; transform:translate(-50%,-100%);}
+.map-swatch{aspect-ratio:4/3; border-radius:3px; position:relative; overflow:hidden; background:var(--pergamena-2);}
+.map-swatch iframe{position:absolute; inset:0; width:100%; height:100%; filter:grayscale(0.15) contrast(1.02);}
 @media (max-width:900px){ .contact-grid{grid-template-columns:1fr;} }
 
 /* Footer */
